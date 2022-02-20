@@ -28,6 +28,10 @@ const ConnectPage = () => {
           setMessages((messages) => [...messages, data]);
           console.log(data);
         });
+        conn.on("error", (err) => {
+          setMessages((messages) => [...messages, `ERROR: ${err}`]);
+          console.error(err);
+        });
       });
       setMePeer(peer);
 

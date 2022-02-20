@@ -1,0 +1,1 @@
+- reconn peers on channel refresh
